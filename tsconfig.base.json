@@ -1,5 +1,5 @@
 {
-	"extends": "@sapphire/eslint-config",
+	"extends": "@skyra/eslint-config",
 	"compilerOptions": {
 		"target": "ES2019",
 		"declaration": true,
