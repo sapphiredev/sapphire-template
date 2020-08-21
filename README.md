@@ -14,23 +14,11 @@ This is the template to be used for Sapphire Project repositories
 1. Find and replace all instances of `template` with the proper word / ID / etc
 2. Ensure the primary branch is called `main`
 3. Ensure branch protection is on
-4. Create a branch called `build`, clear it of any data except
-    - package.json
-    - LICENSE.md
-    - README.md
-    - .gitignore
-    - .all-contributorsrc
-    - **Rename `.gitignore.build` to `.gitignore`**
-5. Create a branch called `gh-pages`, clear it of any data except
-    - LICENSE.md
-    - README.md
-    - .gitignore
-    - .all-contributorsrc
-6. Disable `Packages` from being included in the repository homepage
-7. Enable LGTM for the repository
-8. Enable Depfu for the repository
-9. Enable Coveralls for the repository
-10. Remove this section from the README
+4. Disable `Packages` from being included in the repository homepage
+5. Enable LGTM for the repository
+6. Enable Depfu for the repository
+7. Enable Coveralls for the repository
+8. Remove this section from the README
 
 ## Features
 
