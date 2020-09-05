@@ -4,7 +4,7 @@
 
 # @sapphire/template
 
-Template for Sapphire Repositories</h4>
+Template for Sapphire Repositories.</h4>
 
 [![GitHub](https://img.shields.io/github/license/sapphire-project/template)](https://github.com/sapphire-project/template/blob/main/LICENSE.md)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/sapphire-project/template.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/sapphire-project/template/alerts/)
