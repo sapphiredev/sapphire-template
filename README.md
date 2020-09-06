@@ -1,4 +1,10 @@
-<div style="text-align:center;"><h1>Template for Sapphire Repositories</h1></div>
+<div align="center">
+
+![Sapphire Logo](https://cdn.skyra.pw/gh-assets/sapphire.png)
+
+# @sapphire/template
+
+**Template for Sapphire Repositories.**
 
 [![GitHub](https://img.shields.io/github/license/sapphire-project/template)](https://github.com/sapphire-project/template/blob/main/LICENSE.md)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/sapphire-project/template.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/sapphire-project/template/alerts/)
@@ -7,7 +13,7 @@
 [![npm](https://img.shields.io/npm/v/@sapphire/template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/template)
 [![Depfu](https://badges.depfu.com/badges/template/count.svg)](https://depfu.com/github/sapphire-project/template?project_id=template)
 
-This is the template to be used for Sapphire Project repositories
+</div>
 
 # Steps after creating a repo with this template
 
@@ -31,12 +37,11 @@ This is the template to be used for Sapphire Project repositories
 
 ## API Documentation
 
-For the full API documentation please refer to [the TypeDoc generated documentation](https://sapphire-project.github.io/template)
+For the full API documentation please refer to the TypeDoc generated [documentation](https://sapphire-project.github.io/template).
 
 ## Buy us some doughnuts
 
-Sapphire Project is open source and always will be, even if we don't get donations. That said, we know there are amazing people who
-may still want to donate just to show their appreciation. Thanks you very much in advance!
+Sapphire Project is and always will be open source, even if we don't get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!
 
 We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.
 
