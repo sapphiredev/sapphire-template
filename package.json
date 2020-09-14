@@ -24,8 +24,8 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@commitlint/cli": "^9.1.2",
-		"@commitlint/config-conventional": "^9.1.2",
+		"@commitlint/cli": "^11.0.0",
+		"@commitlint/config-conventional": "^11.0.0",
 		"@sapphire/eslint-config": "github:sapphire-project/utilities#build-eslint-config",
 		"@sapphire/ts-config": "github:sapphire-project/utilities#build-tsconfig",
 		"@types/jest": "^26.0.13",
