@@ -57,7 +57,7 @@
 	"peerDependencies": {},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sapphire-community/template.git"
+		"url": "git+https://github.com/sapphiredev/template.git"
 	},
 	"files": [
 		"dist",
@@ -78,9 +78,9 @@
 		"discordjs"
 	],
 	"bugs": {
-		"url": "https://github.com/sapphire-community/template/issues"
+		"url": "https://github.com/sapphiredev/template/issues"
 	},
-	"homepage": "https://sapphire-community.github.io/template",
+	"homepage": "https://sapphiredev.github.io/template",
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"

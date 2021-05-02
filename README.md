@@ -6,12 +6,10 @@
 
 **Template for Sapphire Repositories.**
 
-[![GitHub](https://img.shields.io/github/license/sapphire-community/template)](https://github.com/sapphire-community/template/blob/main/LICENSE.md)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/sapphire-community/template.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/sapphire-community/template/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/sapphire-community/template.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/sapphire-community/template/context:javascript)
-[![Coverage Status](https://coveralls.io/repos/github/sapphire-community/template/badge.svg?branch=main)](https://coveralls.io/github/sapphire-community/template?branch=main)
+[![GitHub](https://img.shields.io/github/license/sapphiredev/template)](https://github.com/sapphiredev/template/blob/main/LICENSE.md)
+[![codecov](https://codecov.io/gh/sapphire-community/sapphire-template/branch/main/graph/badge.svg?token=0MSAyoZNxz)](https://codecov.io/gh/sapphire-community/sapphire-template)
 [![npm](https://img.shields.io/npm/v/@sapphire/template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/template)
-[![Depfu](https://badges.depfu.com/badges/template/count.svg)](https://depfu.com/github/sapphire-community/template?project_id=template)
+[![Depfu](https://badges.depfu.com/badges/template/count.svg)](https://depfu.com/github/sapphiredev/e?project_id=template)
 
 </div>
 
@@ -21,10 +19,9 @@
 2. Ensure the primary branch is called `main`
 3. Ensure branch protection is on
 4. Disable `Packages` from being included in the repository homepage
-5. Enable LGTM for the repository
-6. Enable Depfu for the repository
-7. Enable Coveralls for the repository
-8. Remove this section from the README
+5. Enable Depfu for the repository
+6. Enable Codecov for the repository
+7. Remove this section from the README
 
 ## Features
 
@@ -37,7 +34,7 @@
 
 ## API Documentation
 
-For the full API documentation please refer to the TypeDoc generated [documentation](https://sapphire-community.github.io/template).
+For the full API documentation please refer to the TypeDoc generated [documentation](https://sapphiredev.github.io/template).
 
 ## Buy us some doughnuts
 
