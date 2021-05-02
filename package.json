@@ -33,13 +33,13 @@
 		"@sapphire/eslint-config": "^3.1.1",
 		"@sapphire/prettier-config": "^1.1.0",
 		"@sapphire/ts-config": "^2.2.0",
-		"@types/jest": "^26.0.22",
-		"@types/node": "^14.14.41",
+		"@types/jest": "^26.0.23",
+		"@types/node": "^15.0.1",
 		"@typescript-eslint/eslint-plugin": "^4.22.0",
 		"@typescript-eslint/parser": "^4.22.0",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^7.24.0",
-		"eslint-config-prettier": "^8.2.0",
+		"eslint": "^7.25.0",
+		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-prettier": "^3.4.0",
 		"husky": "^6.0.0",
 		"jest": "^26.6.3",
@@ -98,13 +98,12 @@
 		"access": "public"
 	},
 	"resolutions": {
-		"acorn": "^8.1.0",
 		"minimist": "^1.2.5",
 		"kind-of": "^6.0.3",
 		"jest-environment-jsdom": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz",
 		"jest-jasmine2": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz",
 		"dot-prop": "^6.0.1",
-		"marked": "^2.0.1"
+		"marked": "^2.0.3"
 	},
 	"prettier": "@sapphire/prettier-config"
 }
