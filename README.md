@@ -22,6 +22,7 @@
 5. Enable Depfu for the repository
 6. Enable Codecov for the repository
 7. Remove this section from the README
+8. Uncomment the lines in [`continuous-delivery.yml`](.github/workflows/continuous-delivery.yml) to enable publishing to NPM
 
 ## Features
 
