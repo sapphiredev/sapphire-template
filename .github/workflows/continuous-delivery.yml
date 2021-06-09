@@ -15,7 +15,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 2
-          ref: ${{ github.event.inputs.branch_name || 'main' }}
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
@@ -45,7 +44,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          ref: ${{ github.event.inputs.branch_name || 'main' }}
       - name: Use Node.js v16
         uses: actions/setup-node@v2
         with:
@@ -75,8 +73,6 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.inputs.branch_name || 'main' }}
       - name: Use Node.js v16
         uses: actions/setup-node@v2
         with:
