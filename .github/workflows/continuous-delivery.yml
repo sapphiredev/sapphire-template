@@ -60,8 +60,8 @@ jobs:
       - name: Install Dependencies if Cache Miss
         if: ${{ !steps.cache-restore.outputs.cache-hit }}
         run: yarn --frozen-lockfile
-      - name: Bump Version
-        run: yarn standard-version --skip.commit --skip.tag --prerelease "next.$(git rev-parse --verify --short HEAD)"
+      - name: Build code
+        run: yarn build
       # - name: Publish to NPM
       #   run: npm publish --tag next || true
       #   env:
