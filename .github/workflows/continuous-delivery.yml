@@ -2,10 +2,6 @@ name: Continuous Delivery
 
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Branch to deploy'
-        required: true
   push:
     branches:
       - main
