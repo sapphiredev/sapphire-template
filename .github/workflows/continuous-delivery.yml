@@ -15,8 +15,13 @@ jobs:
     name: Publish Next to npm
     runs-on: ubuntu-latest
     env:
-      TAG: "${{ github.event_name == 'push' && 'next' || 'pr-${{ github.event.inputs.prNumber }}' }}"
+      PR_NUMBER: ${{ github.event.inputs.prNumber }}
+      TAG: "${{ github.event_name == 'push' && 'next' || 'pr-${PR_NUMBER}' }}"
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: Checkout Project
         uses: actions/checkout@v2
         with:
