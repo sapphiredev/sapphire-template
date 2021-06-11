@@ -14,10 +14,6 @@ jobs:
   Publish:
     name: Publish Next to npm
     runs-on: ubuntu-latest
-    env:
-      PR_NUMBER: ${{ github.event.inputs.prNumber }}
-      TAG: "[[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}'"
-      TAG3: "$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')"
     steps:
       - name: Dump GitHub context
         env:
@@ -43,19 +39,18 @@ jobs:
       - name: Install Dependencies if Cache Miss
         if: ${{ !steps.cache-restore.outputs.cache-hit }}
         run: yarn --frozen-lockfile
-      - name: Bump Version
+      - name: Bump Version & Publish
         run: |
-          TAG2=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
+          # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
+          TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
 
-          echo "TAG-func: $(echo ${TAG1})"
-          echo "TAG2: ${TAG2}"
-          echo "TAG3-func: $(echo ${TAG3})"
+          # Bump the version
+          yarn standard-version --skip.commit --skip.tag --prerelease "${TAG}.$(git rev-parse --verify --short HEAD)"
 
-          yarn standard-version --skip.commit --skip.tag --prerelease "${TAG2}.$(git rev-parse --verify --short HEAD)"
-      # - name: Publish to NPM
-      #   run: npm publish --tag ${TAG} || true
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          # Publish to NPM
+          # npm publish --tag ${TAG} || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
   Docgen:
     name: Docgen
