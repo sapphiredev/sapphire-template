@@ -3,7 +3,7 @@ name: Continuous Delivery
 on:
   workflow_dispatch:
     inputs:
-      pr-number:
+      prNumber:
         description: The number of the PR that is being deployed
         required: true
   push:
@@ -15,7 +15,7 @@ jobs:
     name: Publish Next to npm
     runs-on: ubuntu-latest
     env:
-      TAG: "${{ github.event_name == 'push' && 'next' || 'pr-${{ github.event.inputs.pr-number }}' }}"
+      TAG: "${{ github.event_name == 'push' && 'next' || 'pr-${{ github.event.inputs.prNumber }}' }}"
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
