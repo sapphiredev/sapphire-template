@@ -15,7 +15,9 @@ jobs:
     name: Publish Next to npm
     runs-on: ubuntu-latest
     env:
-      TAG: "'${{ github.event_name }}' == 'push' && 'next' || 'pr-${{ github.event.inputs.prNumber }}'"
+      PR_NUMBER: ${{ github.event.inputs.prNumber }}
+      TAG: "[[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}'"
+      TAG3: "$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')"
     steps:
       - name: Dump GitHub context
         env:
@@ -42,7 +44,16 @@ jobs:
         if: ${{ !steps.cache-restore.outputs.cache-hit }}
         run: yarn --frozen-lockfile
       - name: Bump Version
-        run: yarn standard-version --skip.commit --skip.tag --prerelease "${TAG}.$(git rev-parse --verify --short HEAD)"
+        run: |
+          TAG2=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
+
+          echo "TAG: ${TAG}"
+          echo "TAG-func: $(${TAG1})"
+          echo "TAG2: ${TAG2}"
+          echo "TAG3: ${TAG3}"
+          echo "TAG3-func: $(${TAG3})"
+
+          yarn standard-version --skip.commit --skip.tag --prerelease "${TAG2}.$(git rev-parse --verify --short HEAD)"
       # - name: Publish to NPM
       #   run: npm publish --tag ${TAG} || true
       #   env:
