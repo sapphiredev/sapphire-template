@@ -15,10 +15,6 @@ jobs:
     name: Publish Next to npm
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
       - name: Checkout Project
         uses: actions/checkout@v2
         with:
