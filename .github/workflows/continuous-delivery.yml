@@ -44,7 +44,7 @@ jobs:
           yarn standard-version --skip.commit --skip.tag --prerelease "${TAG}.$(git rev-parse --verify --short HEAD)"
 
           # Publish to NPM
-          # npm publish --tag ${TAG} || true
+          npm publish --tag ${TAG} --dry-run || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
