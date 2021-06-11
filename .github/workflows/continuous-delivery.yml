@@ -10,6 +10,8 @@ jobs:
   Publish:
     name: Publish Next to npm
     runs-on: ubuntu-latest
+    env:
+      TAG: "${{ github.event_name == 'push' && 'next' || 'dev' }}"
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
@@ -32,25 +34,11 @@ jobs:
         if: ${{ !steps.cache-restore.outputs.cache-hit }}
         run: yarn --frozen-lockfile
       - name: Bump Version
-        run: yarn standard-version --skip.commit --skip.tag --prerelease "next.$(git rev-parse --verify --short HEAD)"
+        run: yarn standard-version --skip.commit --skip.tag --prerelease "${TAG}.$(git rev-parse --verify --short HEAD)"
       # - name: Publish to NPM
-      #   if: github.event_name == 'push'
-      #   run: npm publish --tag next || true
+      #   run: npm publish --tag ${TAG} || true
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-      - name: Pack code into tarball
-        id: create_tarball
-        if: github.event_name == 'workflow_dispatch'
-        run: |
-          npm run prepublishOnly
-          npm pack
-          echo ::set-output name=tarball_name::$(npm pack 2>/dev/null | grep -i -E '^sapphire.+\.tgz')
-      - name: Upload tarball to GitHub Artifacts
-        if: github.event_name == 'workflow_dispatch'
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{ steps.create_tarball.outputs.tarball_name }}
-          path: ${{ steps.create_tarball.outputs.tarball_name }}
 
   Docgen:
     name: Docgen
