@@ -44,13 +44,15 @@ jobs:
         run: |
           npm run prepublishOnly
           npm pack
-          echo ::set-output name=tarball_name::$(npm pack 2>/dev/null | grep -i -E '^sapphire.+\.tgz')
+          TARBALL=$(npm pack 2>/dev/null | grep -i -E '^sapphire.+\.tgz')
+          tar -xzvf ${TARBALL}
+          echo ::set-output name=artifact_name::$(echo ${TARBALL} | sed 's/.tgz//g')
       - name: Upload tarball to GitHub Artifacts
         if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ steps.create_tarball.outputs.tarball_name }}
-          path: ${{ steps.create_tarball.outputs.tarball_name }}
+          name: ${{ steps.create_tarball.outputs.artifact_name }}
+          path: package
 
   Docgen:
     name: Docgen
