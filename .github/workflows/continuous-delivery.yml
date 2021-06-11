@@ -15,7 +15,6 @@ jobs:
     name: Publish Next to npm
     runs-on: ubuntu-latest
     env:
-      PR_NUMBER: ${{ github.event.inputs.prNumber }}
       TAG: "'${{ github.event_name }}' == 'push' && 'next' || 'pr-${{ github.event.inputs.prNumber }}'"
     steps:
       - name: Dump GitHub context
@@ -43,8 +42,7 @@ jobs:
         if: ${{ !steps.cache-restore.outputs.cache-hit }}
         run: yarn --frozen-lockfile
       - name: Bump Version
-        run: |
-          yarn standard-version --skip.commit --skip.tag --prerelease "${TAG}.$(git rev-parse --verify --short HEAD)"
+        run: yarn standard-version --skip.commit --skip.tag --prerelease "${TAG}.$(git rev-parse --verify --short HEAD)"
       # - name: Publish to NPM
       #   run: npm publish --tag ${TAG} || true
       #   env:
