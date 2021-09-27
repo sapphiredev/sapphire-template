@@ -9,20 +9,18 @@
 [![GitHub](https://img.shields.io/github/license/sapphiredev/template)](https://github.com/sapphiredev/template/blob/main/LICENSE.md)
 [![codecov](https://codecov.io/gh/sapphiredev/sapphire-template/branch/main/graph/badge.svg?token=0MSAyoZNxz)](https://codecov.io/gh/sapphiredev/sapphire-template)
 [![npm](https://img.shields.io/npm/v/@sapphire/template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/template)
-[![Depfu](https://badges.depfu.com/badges/template/count.svg)](https://depfu.com/github/sapphiredev/e?project_id=template)
 
 </div>
 
 # Steps after creating a repo with this template
 
 1. Find and replace all instances of `template` with the proper word / ID / etc
-2. Ensure the primary branch is called `main`
-3. Ensure branch protection is on
-4. Disable `Packages` from being included in the repository homepage
-5. Enable Depfu for the repository
-6. Enable Codecov for the repository
-7. Remove `--dry-run` from line 47 in [`continuous-delivery.yml`](.github/workflows/continuous-delivery.yml) to enable publishing to NPM
-8. Remove this section from the README
+1. Ensure the primary branch is called `main`
+1. Ensure branch protection is on
+1. Disable `Packages` from being included in the repository homepage
+1. Enable Codecov for the repository
+1. Remove `--dry-run` from line 47 in [`continuous-delivery.yml`](.github/workflows/continuous-delivery.yml) to enable publishing to NPM
+1. Remove this section from the README
 
 ## Features
 
