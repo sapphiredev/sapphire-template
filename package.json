@@ -77,7 +77,7 @@
 	"bugs": {
 		"url": "https://github.com/sapphiredev/template/issues"
 	},
-	"homepage": "https://sapphiredev.github.io/template",
+	"homepage": "https://www.sapphirejs.dev",
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"
