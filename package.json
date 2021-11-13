@@ -12,7 +12,7 @@
 		"docs": "typedoc",
 		"test": "jest",
 		"test:watch": "jest --watch",
-		"update": "yarn upgrade-interactive --latest",
+		"update": "yarn upgrade-interactive",
 		"build": "tsc -b src",
 		"clean": "tsc -b src --clean",
 		"watch": "tsc -b src -w",
