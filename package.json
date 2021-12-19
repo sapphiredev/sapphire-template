@@ -54,7 +54,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sapphiredev/template.git"
+		"url": "git+https://github.com/sapphiredev/sapphire-template.git"
 	},
 	"files": [
 		"dist",
@@ -75,7 +75,7 @@
 		"discordjs"
 	],
 	"bugs": {
-		"url": "https://github.com/sapphiredev/template/issues"
+		"url": "https://github.com/sapphiredev/sapphire-template/issues"
 	},
 	"homepage": "https://www.sapphirejs.dev",
 	"commitlint": {

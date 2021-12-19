@@ -6,7 +6,7 @@
 
 **Template for Sapphire Repositories.**
 
-[![GitHub](https://img.shields.io/github/license/sapphiredev/template)](https://github.com/sapphiredev/template/blob/main/LICENSE.md)
+[![GitHub](https://img.shields.io/github/license/sapphiredev/sapphire-template)](https://github.com/sapphiredev/sapphire-template/blob/main/LICENSE.md)
 [![codecov](https://codecov.io/gh/sapphiredev/sapphire-template/branch/main/graph/badge.svg?token=0MSAyoZNxz)](https://codecov.io/gh/sapphiredev/sapphire-template)
 [![npm](https://img.shields.io/npm/v/@sapphire/template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/template)
 
