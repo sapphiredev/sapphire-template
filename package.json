@@ -34,8 +34,8 @@
 		"@sapphire/ts-config": "^3.3.4",
 		"@types/jest": "^29.2.4",
 		"@types/node": "^18.11.17",
-		"@typescript-eslint/eslint-plugin": "^5.46.1",
-		"@typescript-eslint/parser": "^5.46.1",
+		"@typescript-eslint/eslint-plugin": "^5.47.0",
+		"@typescript-eslint/parser": "^5.47.0",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.30.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -49,7 +49,7 @@
 		"standard-version": "^9.3.2",
 		"ts-jest": "^29.0.3",
 		"typedoc": "^0.23.23",
-		"typedoc-plugin-mdn-links": "^2.0.1",
+		"typedoc-plugin-mdn-links": "^2.0.2",
 		"typescript": "^4.9.4"
 	},
 	"repository": {
@@ -99,5 +99,5 @@
 		"minimist": "^1.2.7"
 	},
 	"prettier": "@sapphire/prettier-config",
-	"packageManager": "yarn@3.3.0"
+	"packageManager": "yarn@3.3.1"
 }
