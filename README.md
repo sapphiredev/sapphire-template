@@ -44,16 +44,14 @@ We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub S
 |     Patreon     |    [Click Here](https://sapphirejs.dev/patreon)     |
 |     PayPal      |     [Click Here](https://sapphirejs.dev/paypal)     |
 
-## Contributors ✨
+## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Please make sure to read the [Contributing Guide][contributing] before making a pull request.
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
+Thank you to all the people who already contributed to Sapphire!
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+<a href="https://github.com/sapphiredev/sapphire-template/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=sapphiredev/sapphire-template" />
+</a>
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+[contributing]: https://github.com/sapphiredev/.github/blob/main/.github/CONTRIBUTING.md
